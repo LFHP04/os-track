@@ -270,6 +270,18 @@
           -->
 
           <div class="campo">
+            <label for="produto -tipo">Tipo de produto</label>
+            <select id="produto-tipo" name="produto.tipo" required>
+              <option value="">Selecione </option>
+              <option value="notebook">notebook</option>
+              <option value="desktop">desktop</option>
+              <option value="celular">celular</option>
+              <option value="impressora">impressora</option>
+              <option value="outro">outro</option> 
+            </select>
+          </div>
+          
+          <div class="campo">
             <label for="produto-marca">Marca</label>
             <input
               type="text"
@@ -308,6 +320,27 @@
               <label for="acessorio-carregador">Carregador</label>
             </div>
           -->
+            <label>Acessórios recebidos</label>
+            <div class="grupo-opcoes">   
+            <div class ="opcao">
+              <input type="checkbox" id="acessorio-carregador" name="acessorios" value="carregador">
+              <label for="acessorio-carregador">Carregador</label>
+              </div>
+              </div> class="opcao">
+              <input type="checkbox" id="acessorio-cabo" name="acessorios" value="cabo">
+              <label for="acessorio-cabo">Cabo</label>
+            </div>
+            <div class="opcao">
+              <input type="checkbox" id="acessorio-capa" name="acessorios" value="capa">
+              <label for="acessorio-capa">Capa</label>
+              </div>
+              <div class="opcao">
+                <input type="checkbox" id="acessorio-bateria" name="acessorios" value="bateria">
+                <label for="acessorio-bateria">Bateria</label>
+              </div>
+            </div>
+          
+
 
         </fieldset>
 
@@ -334,6 +367,19 @@
             pode ficar marcado por vez.
           -->
 
+          <label>Prioridade</label>
+          <div class="grupo-opcoes">
+            <div class="opcao">
+              <input type="radio" id="prioridade-normal" name="prioridade" value="normal" checked>
+              <label for="prioridade-normal">Normal</label>
+              </div>
+              <div class="opcao">
+                <input type="radio" id="prioridade-urgente" name="prioridade" value="urgente">
+                <label for="prioridade-urgente">Urgente</label>
+              </div>
+            </div>
+          
+
           <!--
             TODO 4: campo dataPrevisao
             Crie um input do tipo date com a label associada.
@@ -341,6 +387,11 @@
             name: dataPrevisao
             O campo e opcional, entao nao leva required.
           -->
+
+          <div class="campo">
+            <label for="data-previsao">Previsao de entrega</label>
+            <input type="date" id="data-previsao" name="dataPrevisao">
+          </div>
 
           <!--
             TODO 5: campo valorOrcamento
@@ -351,6 +402,11 @@
             Nao aceita valor negativo, entao use min="0"
             O campo e opcional.
           -->
+
+          <div class="campo">
+            <label for="valor-orcamento">Valor do orcamento</label>
+            <input type="number" id="valor-orcamento" name="valorOrcamento" step="0.01" min="0">
+          </div>
 
         </fieldset>
 
